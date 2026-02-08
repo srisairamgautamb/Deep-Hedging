@@ -1,0 +1,43 @@
+hedging:
+  agent_type: "ppo"
+  learning_rate: 0.0003
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_epsilon: 0.2
+  entropy_coef: 0.01
+  value_coef: 0.5
+  max_grad_norm: 0.5
+  hidden_dims: [256, 256]
+  episodes: 10000
+  batch_size: 64
+  update_epochs: 10
+
+environment:
+  cost_multiplier: 0.001
+  slippage_bps: 1.0
+  tick_size: 0.01
+  max_position: 100
+  risk_free_rate: 0.05
+  volatility: 0.20
+
+option:
+  strike: 100.0
+  barrier: 120.0
+  maturity: 1.0
+  option_type: "up_out_call"
+
+backtesting:
+  initial_capital: 1000000
+  position_limit: 1000
+  margin_requirement: 0.10
+
+data:
+  train_start: "2020-01-01"
+  train_end: "2023-12-31"
+  test_start: "2024-01-01"
+  test_end: "2024-06-30"
+
+logging:
+  level: "INFO"
+  log_dir: "logs"
+  tensorboard: true
