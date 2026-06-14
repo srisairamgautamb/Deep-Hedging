@@ -1,6 +1,6 @@
 # Deep Hedging
 
-A production-grade deep reinforcement learning framework for hedging exotic barrier options. Implements analytical pricing models for single-barrier options with continuous monitoring and trains RL agents to learn optimal hedging strategies that minimize transaction costs while managing portfolio risk.
+A deep reinforcement learning framework for hedging exotic barrier options. Implements analytical pricing models for single-barrier options with continuous monitoring and trains RL agents to learn optimal hedging strategies that minimize transaction costs while managing portfolio risk.
 
 ## Overview
 
